@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    font-family: "Do Hyeon", sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+body, html 
+{
+    width: 100%;
+    height: 200vh;
+    background: #fff;
+    z-index: 2;
+}
+
+/* Navigation Bar */
+a{
+    text-decoration: none;
+    color: black;
+
+}
+nav{
+    position: relative;
+    width: 100%;
+    height: 3%;   
+    padding: 50px;
+    padding-bottom: 5rem;
+    background-color: #FFD4B2;
+}
+
+ul{
+    position: relative;
+    top: 50%;
+    width: 100%;
+    font-size: 2rem;
+    height: 50%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+
+/* ------------------------------------*/
+
+.inner-cursor{
+    position: fixed;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 2s, height 2s;
+    z-index: 10000;
+}
+.inner-cursor.grow{
+    width: 45px;
+    height: 45px;
+    transition: width 2s, height 2s;
+}
+ .outer-cursor{
+    position: fixed;
+    left: 10px;
+    width: 45px;
+    height: 45px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.0s;
+    z-index: 10000;
+ }
+
+/* MAIN PAGE LINKS */
+
+.links{
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.link-item{
+    position: relative;
+    flex: 1;
+    padding: 12rem 5rem;
+
+}
+.links span{
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-decoration: none;
+    mix-blend-mode: difference;
+
+    font-size: 13rem;
+    padding-left: 1rem;
+}
+.container1{
+    width: 100%;
+    padding: 20rem 0;
+    background-color: violet;
+}
+.container2{
+    width: 100%;
+    padding: 15rem 0;
+    background-color: rgb(145, 138, 145);
+}
+.container3{
+    width: 100%;
+    padding: 15rem 0;
+    background-color: rgb(141, 203, 192);
+}
+.one{
+    background-image: url(Images/web-development-2.gif);
+
+}
+.two{
+    background-image: url(Images/Game-Development.gif);
+}
+.three{
+    background-image: url(Images/Machine-Learning.gif);
+}
+.hover-reveal{
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 700px;
+    height: 500px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(0,-330px);
+    transition: 0.2s ease-out;
+}
+.hover-reveal_inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    will-change: transform;
+    overflow: hidden;
+}
+.hover-reveal_img{
+    background-size: cover;
+    background-position: 50%, 50%;
+    transform-origin: 50%, 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    will-change: transform;
+    transform: scale(0.8, 0.8);
+    transition: 1.5s transform;
+}
+
+/*  Media Queries  */
